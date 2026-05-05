@@ -1,0 +1,8 @@
+/.agents/
+/.codex
+failed-migrations.txt
+logs/
+logs-local/
+state/
+state-local/
+node_modules/

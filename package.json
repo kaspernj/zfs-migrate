@@ -1,0 +1,18 @@
+{
+  "name": "tank-migrate",
+  "version": "0.1.0",
+  "description": "CLI tools for migrating ZFS datasets from tank to jbod",
+  "private": true,
+  "type": "commonjs",
+  "bin": {
+    "migrate-all": "./migrate-all.js",
+    "migrate-zfs-vol": "./migrate-zfs-vol.js"
+  },
+  "scripts": {
+    "check": "node --check migrate-all.js && node --check migrate-zfs-vol.js",
+    "dry-run": "node migrate-all.js --dry-run"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
