@@ -6,3 +6,6 @@ logs-local/
 state/
 state-local/
 node_modules/
+migrate-all.local.sh
+step-1-preflight-recreate-tank.sh
+step-2-destroy-and-create-tank.sh
