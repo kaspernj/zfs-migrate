@@ -1,0 +1,15 @@
+before_script:
+  - npm ci
+builds:
+  build_1:
+    name: Syntax
+    script:
+      - npm run syntax
+  build_2:
+    name: ESLint
+    script:
+      - npm run lint
+  build_3:
+    name: Jasmine
+    script:
+      - npm test

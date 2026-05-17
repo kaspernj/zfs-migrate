@@ -1,18 +1,25 @@
 {
-  "name": "tank-migrate",
+  "name": "zfs-migrate",
   "version": "0.1.0",
-  "description": "CLI tools for migrating ZFS datasets from tank to jbod",
-  "private": true,
+  "description": "CLI tools for migrating ZFS datasets between pools",
   "type": "commonjs",
   "bin": {
-    "migrate-all": "./migrate-all.js",
-    "migrate-zfs-vol": "./migrate-zfs-vol.js"
+    "zfs-migrate": "./bin/zfs-migrate.js"
   },
   "scripts": {
-    "check": "node --check migrate-all.js && node --check migrate-zfs-vol.js",
-    "dry-run": "node migrate-all.js --dry-run"
+    "check": "npm run syntax && npm run lint && npm test",
+    "lint": "eslint .",
+    "syntax": "node --check bin/zfs-migrate.js && node --check src/all.js && node --check src/vol.js",
+    "test": "jasmine",
+    "dry-run": "node bin/zfs-migrate.js all --dry-run"
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.3.0",
+    "globals": "^17.6.0",
+    "jasmine": "^6.2.0"
   }
 }
