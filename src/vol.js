@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// Path-filter validation delivery.
+
 const { spawn, spawnSync } = require("node:child_process")
 const readline = require("node:readline/promises")
 const fs = require("node:fs")
