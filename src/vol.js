@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// Path-filter validation delivery.
+// Path-filter validation delivery remains source-local.
 
 const { spawn, spawnSync } = require("node:child_process")
 const readline = require("node:readline/promises")
