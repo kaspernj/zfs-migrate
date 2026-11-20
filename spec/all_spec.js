@@ -1,3 +1,5 @@
+// Path-filter validation delivery.
+
 const {
   datasetToDest,
   normalizeDatasetRoot,
